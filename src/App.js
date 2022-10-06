@@ -22,7 +22,7 @@ export default function App() {
   return (
     <div>
       <img src={bg} />
-      <h1 className="text-center">{titulo}</h1>
+      <h1 className="text-center">{titulo} ++</h1>
       <hr/>
 
       <form>
