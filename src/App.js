@@ -1,7 +1,7 @@
 import "./css/style.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Tabela from "./Tabela/index.js";
-import bg from "./imagens/Imagem64.jpg"
+
 
 function Button(props){
   
@@ -21,7 +21,7 @@ export default function App() {
   let titulo = 'Indentifique-se'
   return (
     <div>
-      <img src={bg} />
+      
       <h1 className="text-center">{titulo} ++</h1>
       <hr/>
 

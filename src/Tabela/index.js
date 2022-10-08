@@ -1,22 +1,22 @@
 export default function Tabela(){
 let contatos =[
     {
-        nome: 'chiqin',
+        Nome: 'chiqin',
         Telefone:'85-98888-8888',
         Cidade:'caucaia'
     },
     {
-        nome: 'alves',
+        Nome: 'alves',
         Telefone:'85-96666-8888',
         Cidade:'caucaia'
     },
     {
-        nome: 'causon',
+        Nome: 'causon',
         Telefone:'85-97777-6688',
         Cidade:'fortaleza'
     },
     {
-        nome: 'valesca',
+        Nome: 'valesca',
         Telefone:'85-9348-5445',
         Cidade:'icarai'
     }
@@ -36,12 +36,21 @@ let contatos =[
                 </thead>
 
                 <tbody>
-                    {contatos.map(()=>{
+                    {contatos.map(({Nome, Telefone, Cidade},index)=>{
                         return (
-                            <tr>
-                                <td>Nome</td>
-                                <td>Telefone</td>
-                                <td>Cidade</td>
+                            <tr key={index} cursor="poiter" _houver={{bg: "gray.100"}}>
+                                <td>{Nome}</td>
+                                <td>{Telefone}</td>
+                                <td>{Cidade}</td>
+                            
+                                <td>
+                                    <button onclick="buscarparaeditar(${cadaItem.id})" data-bs-toggle="offcanvas" data-bs-target="#offcanvasEditar" class="btn btn-outline-warning btn-sm">
+                                        Editar
+                                    </button> 
+                                    <button onclick="excluir(${cadaItem.id})" class="btn btn-outline-danger">
+                                        Excluir
+                                    </button>
+                                </td>
                             </tr>
                         )
                     })}
